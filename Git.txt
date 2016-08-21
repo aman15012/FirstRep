@@ -2,6 +2,7 @@ go to the directory which you want to make repository
 git init -> initialise repository
 git status -> see the status of rep
 git add "filename" ->add file to staging area, file is not yet added to rep
+git add -A -> Adds all files of the folder into the rep
 git commit -m "message" ->commit all the files in the staging area with a text message to the rep(only committed files can be sent to online repo)
 -- git add '*.txt' -> add all files of the same type '.txt'
 git log -> shows a log of all the commitments we have made so far

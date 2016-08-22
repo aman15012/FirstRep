@@ -21,8 +21,8 @@ git rm 'file name' ->remove the file from the disk as well as the staging area
 git merge branch_name -> to merge the branch to the master .master will now become same as the branch.
 git branch -d branch_name -> to delete a branch
 
-
-
+to see branch changes in the online repo, we must -> git commit origin branch_name 
+if we need to commit a deleted branch -> git commit origin :branch_name
 
 
 

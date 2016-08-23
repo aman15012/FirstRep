@@ -1,0 +1,70 @@
+#!/usr/bin/env python (or pyrhon3) -> always add if you wanna run as a script
+Always give chmod 777 to the script file to make it executable
+sys:
+sys.argv[index one based] -> input from terminal (string array form)
+in one go along with the command to execute the script. in one line.
+sys.exit(0) ->exit the script
+
+optparse:
+OptionParser(along with sys library)
+parser = optparse.OptionParser()
+//making an object of the class
+parser.add_option('-n', '--name', dest='name', help='Your Name',type=string)
+//add_option adds a way in which the script can be executed. -n is short option, --name is long, dest is var where the input is stored. help is what is shown when user uses -h, type is type of input.
+//eg. ./file.py -n aman, ./file.py --name a, ./file.py -h for help
+// ./file.py -n --age 4
+(options, args) = parser.parse_args()
+//the age and name can be accessed through option.name and option.age (the variable names defined in dest)
+//to checkif the user has used the option to specify a value, we can use:
+if options.name is None:
+
+time:
+time.sleep(no. of seconds) -> sleeps for no. of seconds entered
+
+class:
+class classname:
+ class_variables=0/"" etc. // initialization
+ class methods:
+ def method_name(self,other arguments):
+ access the variables by using -> self.variable_name=1(like self is an object)
+ making an object:
+ theUser=None (initialization)
+ theUser=classname()
+ theuser.method_name()
+we can even have an array of a class
+
+File Handling:
+ f=open('filename','w;/'r'/'a') ->open file in the required mode
+ f.write(some string) ->write in the file (only string)
+ var=f.readline() ->variable stores the current line of the file
+ f.read -> whole file as a string
+ file is a like an array of sentences(strings) with each sentesnce at an index
+ f.close() ->close file
+ str.rstrip()-> strips unwanted whitespaces or \ns from end (important in file h)
+ str.strip() ->both begin and end , lstrip() ->start
+ str[starting index: ending index(unincluded)] -> to get a substring
+
+Dictionary:
+ dict={}
+ dict[key]=data
+
+urllib:
+ f=urllib.urlopen(string representing url of webpage) ->like file
+
+Enums:
+ class classname(Enum):
+  var1=0
+  var2=1
+  var3=2
+
+now we can use classname.var1 etc to denote specific states of the class like -> gender.MALE
+
+*** Learn RESTservice
+
+subprocess:
+subprocess.call("ls -l",shell=True)  prints output of ls-l on console
+
+var = subprocess.Popen(['tail', '-500', 'mylogfile.log'], stdout=subprocess.PIPE)
+for line in proc.stdout.readlines():
+	do something
+Popen function takes in command line arguments each as an element in an array. it would store them in var.stdout which you can access like a file.
